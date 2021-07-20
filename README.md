@@ -26,4 +26,40 @@ create table USER
     constraint USER_PK
         primary key (ID)
 );
+
+alter table QUESTION
+	add id int auto_increment;
+
+alter table QUESTION
+	add title varchar(50);
+
+alter table QUESTION
+	add description text;
+
+alter table QUESTION
+	add gmt_create BIGINT;
+
+alter table QUESTION
+	add gmt_modified BIGINT;
+
+alter table QUESTION
+	add creator_id int;
+
+alter table QUESTION
+	add comment_count int default 0;
+
+alter table QUESTION
+	add view_count int default 0;
+
+alter table QUESTION
+	add like_count int default 0;
+
+alter table QUESTION
+	add tag varchar(256);
+
+alter table QUESTION
+	add constraint QUESTION_PK
+		primary key (id);
+
+
 ```
